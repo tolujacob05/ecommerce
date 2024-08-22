@@ -1,0 +1,44 @@
+#spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/product
+#    username: postgres
+#    password: Akinj@re1218
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate
+#    database: postgresql
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  flyway:
+#    baseline-on-migrate: true
+#    enabled: true
+#    baseline-description: "init"
+#    baseline-version: 0
+#    user: postgres
+#    password: Akinj@re1218
+#server:
+#  port: 8050
+
+#Unable to obtain connection from database: FATAL: password authentication failed for user "postgresql"
+
+
+server:
+  port: 8050
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/product
+    username: postgres
+    password: Akinj@re1218
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    baseline-description: "init"
+    baseline-version: 0
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
