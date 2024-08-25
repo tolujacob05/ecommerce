@@ -1,3 +1,5 @@
+server:
+  port: 8090
 spring:
   data:
     mongodb:
@@ -5,8 +7,5 @@ spring:
       password: tolu
       host: localhost
       port: 27017
-      database: customer
+      database: customers
       authentication-database: admin
-
-server:
-  port: 8090

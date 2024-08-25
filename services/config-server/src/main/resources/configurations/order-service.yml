@@ -19,8 +19,8 @@ spring:
       properties:
         spring.json.type.mapping: orderConfirmation:com.tolujacob.ecommerce.kafka.OrderConfirmation
 
-  application:
-    config:
-      customer-url: http://localhost:8222/api/v1/customers
-      payment-url: http://localhost:8222/api/v1/payments
-      product-url: http://localhost:8222/api/v1/products
+application:
+  config:
+    customer-url: http://localhost:8222/api/v1/customers
+    payment-url: http://localhost:8222/api/v1/payments
+    product-url: http://localhost:8222/api/v1/products
