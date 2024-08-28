@@ -1,6 +1,7 @@
 package com.tolujacob.ecommerce.customer;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,13 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/customers")
+@RequiredArgsConstructor
 public class CustomerController {
 
     private final CustomerService service;
-
-    public CustomerController(CustomerService service) {
-        this.service = service;
-    }
 
     @PostMapping
     public ResponseEntity<String> createCustomer(
